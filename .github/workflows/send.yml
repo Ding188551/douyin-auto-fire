@@ -8,9 +8,10 @@ on:
         type: boolean
         default: false
   #使用github actions的日程 可以把下面的这三行代码注释删掉  用外部的不用管
-  schedule:
-    - cron: "0 8 * * *"
-      timezone: "Asia/Shanghai"
+  # 已切换到外部 cron-job.org 触发，停用 GitHub 自带定时，避免重复/延迟发送
+  # schedule:
+  #   - cron: "0 8 * * *"
+  #     timezone: "Asia/Shanghai"
 
 concurrency:
   group: douyin-daily-sender
